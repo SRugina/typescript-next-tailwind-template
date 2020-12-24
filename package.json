@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "gen-env": "gen-env-types .env -o src/env.d.ts -e .",
     "dev": "next",
     "build": "next build && next export",
     "start": "serve out",
@@ -31,7 +30,6 @@
     "eslint-config-prettier": "^6.15.0",
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "gen-env-types": "^1.0.4",
     "husky": ">=4",
     "lint-staged": ">=10",
     "postcss-flexbugs-fixes": "4.2.1",

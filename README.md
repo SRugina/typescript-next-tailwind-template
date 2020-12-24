@@ -1,29 +1,62 @@
-# Tailwind CSS example
+# TypeScript, NextJS, TailwindCSS Template
 
-This is an example of using [Tailwind CSS](https://tailwindcss.com) in a Next.js project.
+## Setup
 
-## Deploy your own
+Ensure you have nodejs and yarn installed, then:
 
-Deploy the example using [Vercel](https://vercel.com):
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss)
-
-## How to use
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
-
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-# or
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
+```sh
+yarn
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/import?filter=next.js&utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+```
+cp .env.example .env
+```
 
-## Notes
+Fill the `.env` file with the api url.
 
-This example is a basic starting point for using [Tailwind CSS](https://tailwindcss.com) with Next.js. It includes the following [PostCSS](https://github.com/postcss/postcss) plugins:
+## Usage
 
-- [postcss-preset-env](https://preset-env.cssdb.org/) - Adds stage 2+ features and autoprefixes
+### Build
 
-To control the generated stylesheet's filesize, this example uses Tailwind CSS' [`purge` option](https://tailwindcss.com/docs/controlling-file-size/#removing-unused-css) to remove unused CSS.
+To export as a static site:
+
+```sh
+yarn build
+```
+
+### Watch & Serve
+
+To watch for changes and serve the site on localhost:
+
+```sh
+yarn dev
+```
+### Serve
+
+To serve locally without watching for code changes:
+
+```sh
+yarn start
+```
+
+### Automatic pre-commit checks
+
+Before a commit is made, all `.ts`, `.tsx`, and `.js` files will automatically be linted by eslint and formatted by prettier.
+
+To run those checks manually:
+
+```sh
+yarn lint
+yarn format
+```
+
+### Automatic pre-push checks
+
+Before a push is made, the code will be type checked to ensure there are no typescript issues.
+
+To run this check manually:
+
+```sh
+yarn type-check
+```
+
