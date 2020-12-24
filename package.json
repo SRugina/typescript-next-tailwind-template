@@ -1,0 +1,63 @@
+{
+  "name": "typescript-next-tailwind-template",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "gen-env": "gen-env-types .env -o src/env.d.ts -e .",
+    "dev": "next",
+    "build": "next build && next export",
+    "start": "serve out",
+    "type-check": "tsc --pretty --noEmit",
+    "format": "prettier --write .",
+    "lint": "eslint . --ext ts --ext tsx --ext js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/SRugina/typescript-next-tailwind-template.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/SRugina/typescript-next-tailwind-template/issues"
+  },
+  "homepage": "https://github.com/SRugina/typescript-next-tailwind-template#readme",
+  "devDependencies": {
+    "@types/node": "^14.14.8",
+    "@types/react": "^16.9.56",
+    "@typescript-eslint/eslint-plugin": "^4.8.1",
+    "@typescript-eslint/parser": "^4.8.1",
+    "eslint": "^7.13.0",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "gen-env-types": "^1.0.4",
+    "husky": ">=4",
+    "lint-staged": ">=10",
+    "postcss-flexbugs-fixes": "4.2.1",
+    "postcss-preset-env": "^6.7.0",
+    "prettier": "^2.1.2",
+    "serve": "^11.3.2",
+    "tailwindcss": "^1.7.4",
+    "typescript": "^4.0.5"
+  },
+  "dependencies": {
+    "isomorphic-unfetch": "^3.1.0",
+    "next": "latest",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "swr": "^0.3.11"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "yarn run type-check"
+    }
+  },
+  "lint-staged": {
+    "*.@(ts|tsx|js)": [
+      "yarn lint",
+      "yarn format"
+    ]
+  }
+}
