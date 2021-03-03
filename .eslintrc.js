@@ -28,6 +28,7 @@ module.exports = {
       "error",
       { "ts-ignore": "allow-with-description" },
     ],
+    "@typescript-eslint/no-non-null-assertion": 0,
     "@typescript-eslint/explicit-function-return-type": 0,
     "@typescript-eslint/explicit-module-boundary-types": 0,
     "@typescript-eslint/explicit-member-accessibility": 0,
